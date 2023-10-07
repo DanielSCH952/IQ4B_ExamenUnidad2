@@ -11,6 +11,8 @@ public partial class Usuario
 
     public string ApellidoPaterno { get; set; } = null!;
 
+    public string ApellidoMaterno { get; set; } = null!;
+
     public int Edad { get; set; }
 
     public string Sexo { get; set; } = null!;

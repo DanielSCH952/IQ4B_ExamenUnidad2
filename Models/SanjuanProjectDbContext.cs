@@ -31,7 +31,7 @@ public partial class SanjuanProjectDbContext : DbContext
     {
         modelBuilder.Entity<Dispositivo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Disposit__3213E83FAAB2F26B");
+            entity.HasKey(e => e.Id).HasName("PK__Disposit__3213E83FC1AE23EC");
 
             entity.ToTable("Dispositivo");
 
@@ -62,7 +62,7 @@ public partial class SanjuanProjectDbContext : DbContext
 
         modelBuilder.Entity<HistorialDispositivo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Historia__3213E83F2AD8F5F0");
+            entity.HasKey(e => e.Id).HasName("PK__Historia__3213E83FFBD98272");
 
             entity.ToTable("HistorialDispositivo");
 
@@ -85,7 +85,7 @@ public partial class SanjuanProjectDbContext : DbContext
 
         modelBuilder.Entity<Rol>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Rol__3213E83F0428AA2E");
+            entity.HasKey(e => e.Id).HasName("PK__Rol__3213E83FEBB55580");
 
             entity.ToTable("Rol");
 
@@ -98,11 +98,15 @@ public partial class SanjuanProjectDbContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3213E83F19E2C816");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3213E83FB8669A23");
 
             entity.ToTable("Usuario");
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.ApellidoMaterno)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("apellidoMaterno");
             entity.Property(e => e.ApellidoPaterno)
                 .HasMaxLength(30)
                 .IsUnicode(false)
