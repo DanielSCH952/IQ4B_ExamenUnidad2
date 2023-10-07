@@ -1,10 +1,25 @@
 @{
     ViewData["Title"] = "NoPermitido";
 }
-
-<h1>@ViewData["Title"]</h1>
-
 <div>
-    <h1 class="h1">No permitido</h1>
-    <a asp-action="Login" class="btn btn-danger">Regresar</a>
+    <h1 class="h1">No permitido</h1><br>
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <h1 class="h2 text-center">Necesita iniciar sesion</h1>
+        <a asp-action="Login" asp-controller="Usuarios" class="btn btn-danger">Regresar al dashboar</a>
+    }
+    else
+    {
+        @if (User.IsInRole("usuario"))
+        {
+            <h1 class="h2 text-center">No tiene permiso para esto</h1>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Regresar al inicio</a>
+        }
+        else
+        {
+            <h1 class="h2 text-center">Si estas aqui es porque se me paso una validacion</h1>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Regresar al inicio</a>
+        }
+
+    }
 </div>

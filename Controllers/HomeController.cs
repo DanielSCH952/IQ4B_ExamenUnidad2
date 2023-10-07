@@ -15,7 +15,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        ViewBag.status = (User.Identity.IsAuthenticated) ? 0 : 401;
+        return (User.Identity.IsAuthenticated) ? View() : RedirectToAction("NoPermitido", "Usuarios");
+
     }
 
     public IActionResult Privacy()

@@ -15,8 +15,8 @@ builder.Services.AddSignalR();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme
 ).AddCookie(opciones =>
 {
-    opciones.LoginPath = new PathString("/Usuario/Login");
-    opciones.AccessDeniedPath = new PathString("/Usuario/NoPermitido");
+    opciones.LoginPath = new PathString("/Usuarios/Login");
+    opciones.AccessDeniedPath = new PathString("/Usuarios/NoPermitido");
 });
 var app = builder.Build();
 
@@ -37,6 +37,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Usuario}/{action=Login}");
+    pattern: "{controller=Usuarios}/{action=Login}");
 
 app.Run();
