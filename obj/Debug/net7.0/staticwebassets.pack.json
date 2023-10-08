@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ExU2.bundle.scp.css"
     },
     {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\css\\fondo.css",
+      "PackagePath": "staticwebassets\\css\\fondo.css"
+    },
+    {
       "Id": "C:\\IQ4B\\ExU2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

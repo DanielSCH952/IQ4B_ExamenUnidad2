@@ -8,14 +8,23 @@
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/ExU2.styles.css" asp-append-version="true" />
+
+  <link rel="stylesheet" href="~/css/fondo.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
 </head>
 
-<body id="generalBody">
+<body id="generalBody" class="sectionBody">
   <header>
     <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Ejemplo WebSockets</a>
+        @if (User.Identity.IsAuthenticated)
+        {
+          <a class="navbar-brand" asp-action="Index" asp-controller="Home">Ejemplo WebSockets</a>
+        }
+        else
+        {
+          <a class="navbar-brand" href="#">Ejemplo WebSockets</a>
+        }
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,9 +39,12 @@
                   Opciones
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" asp-action="MostrarUsuarios" asp-controller="Usuarios">Usuarios</a>
-                  </li>
+                  @if (User.IsInRole("administrador"))
+                  {
+                    <li>
+                      <a class="dropdown-item" asp-action="MostrarUsuarios" asp-controller="Usuarios">Usuarios</a>
+                    </li>
+                  }
                 </ul>
               </li>
               <li class="nav-item">
@@ -52,22 +64,22 @@
       </div>
     </nav>
   </header>
-  <div class="container">
-    <main role="main" class="pb-3">
+  <div class="contenedor">
+    <main role="main">
+
       @RenderBody()
     </main>
   </div>
-
-  <footer class="border-top footer text-muted">
-    <div class="container">
-      &copy; 2023 - ExU2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-  </footer>
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
+
+  <div class="wave wave1 z-2"></div>
+  <div class="wave wave2 z-1"></div>
+  <div class="wave wave3 z-0"></div>
+  <div class="wave wave4 z-n1"></div>
 </body>
 
 </html>

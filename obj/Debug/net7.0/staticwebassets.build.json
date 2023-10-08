@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KMeLmhCBE4DDQKGdBaq3doGuAw5vAuX2DZ7cLzGc/NA=",
+  "Hash": "4RDqxiPF0ck6fjDIbu2FiPH1rnqNQboqzvlcJzp3tvg=",
   "Source": "ExU2",
   "BasePath": "_content/ExU2",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\IQ4B\\ExU2\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ExU2.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\IQ4B\\ExU2\\wwwroot\\css\\fondo.css",
+      "SourceId": "ExU2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\IQ4B\\ExU2\\wwwroot\\",
+      "BasePath": "_content/ExU2",
+      "RelativePath": "css/fondo.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\fondo.css"
     },
     {
       "Identity": "C:\\IQ4B\\ExU2\\wwwroot\\css\\site.css",
