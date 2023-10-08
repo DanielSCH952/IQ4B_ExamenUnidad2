@@ -10,6 +10,7 @@ namespace ExU2.Controllers
     public class UsuariosController : Controller
     {
         private readonly SanjuanProjectDbContext context;
+        //Si necesitan la variable de hubContext deberian ingresarla por aqui:
         public UsuariosController(SanjuanProjectDbContext dbContext)
         {
             context = dbContext;
@@ -47,6 +48,7 @@ namespace ExU2.Controllers
         [HttpGet]
         public IActionResult RegistrarUsuario()
         {
+            //Aqui User.IsInRole("administrador") nos ayuda a comprobar si es un administrador el que intenta ingresar o no, de no ser asi se redirecciona a NoPermitido
             return (User.IsInRole("administrador")) ? View() : RedirectToAction("NoPermitido");
         }
         [HttpPost]
@@ -55,6 +57,7 @@ namespace ExU2.Controllers
 
             if (ModelState.IsValid)
             {
+
                 context.Usuarios.Add(u);
                 context.SaveChanges();
                 return RedirectToAction("MostrarUsuarios");
@@ -65,17 +68,17 @@ namespace ExU2.Controllers
         [HttpGet]
         public IActionResult MostrarUsuarios()
         {
-
+            //Esta es otra forma de validar que sea admin con un if
             if (User.IsInRole("administrador"))
             {
                 return View(context.Usuarios.Include(x => x.IdRolNavigation).ToList());
             }
-            ViewBag.status = 403;
             return RedirectToAction("NoPermitido");
         }
         [HttpGet]
         public IActionResult EliminarUsuario(int id)
         {
+            //Recibimos el parametro id y atraves de un metodo get , lo cual nos ofrece una eliminacion muy limpia desde la misma tabla
             Usuario utemp = context.Usuarios.FirstOrDefault(x => x.Id == id);
             if (utemp == null)
             {
@@ -91,6 +94,7 @@ namespace ExU2.Controllers
         [HttpGet]
         public IActionResult ActualizarUsuario(int id)
         {
+            //Recibe el id por metodo get desde la misma tabla para acceder a la funcion de actualizar desde un boton generan un usuario y mostrando sus parametros en el formulario
             Usuario utemp = context.Usuarios.Include(x => x.IdRolNavigation).FirstOrDefault(user => user.Id == id);
             return View(utemp);
         }
