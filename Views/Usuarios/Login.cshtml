@@ -3,43 +3,50 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>@ViewData["Title"]</h1>
+<!--Este login solo se puso preventido, si se desea cambiar esta en todo su derecho -->
+<link rel="stylesheet" href="~/css/fondo.css">
+<section>
+    <div class="contenedor">
+        <div class="container text-center mt-3">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="card text-center">
+                        <div class="card-header bg-primary text-white">
+                            Iniciar Sesión
+                        </div>
+                        <div class="card-body">
+                            <form asp-action="Login" method="post">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label asp-for="Username"></label>
+                                        <input type="text" asp-for="Username" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label asp-for="Password"></label>
+                                        <input type="password" asp-for="Password" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <input type="submit" value="Iniciar Sesión" class="btn btn-primary">
+                                </div>
 
-//Este login solo se puso preventido, si se desea cambiar esta en todo su derecho 
-<div class="container text-center mt-3">
-    <div class="row justify-content-center">
-        <div class="col-4">
-            <div class="card text-center">
-                <div class="card-header bg-primary text-white">
-                    Iniciar Sesión
+                            </form>
+
+                        </div>
+                    </div>
+                    @if (ViewBag.Error != null)
+                    {
+                        <h3 class="text-center text-danger">@ViewBag.Error</h3>
+                    }
                 </div>
-                <div class="card-body">
-                    <form asp-action="Login" method="post">
-                        <div class="row">
-                            <div class="col-12">
-                                <label asp-for="Username"></label>
-                                <input type="text" asp-for="Username" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <label asp-for="Password"></label>
-                                <input type="password" asp-for="Password" class="form-control">
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <input type="submit" value="Iniciar Sesión" class="btn btn-primary">
-                        </div>
 
-                    </form>
-
-                </div>
             </div>
-            @if (ViewBag.Error != null)
-            {
-                <h3 class="text-center text-danger">@ViewBag.Error</h3>
-            }
         </div>
-
     </div>
-</div>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+</section>

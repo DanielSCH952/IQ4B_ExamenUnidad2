@@ -8,14 +8,11 @@
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/ExU2.styles.css" asp-append-version="true" />
-
-  <link rel="stylesheet" href="~/css/fondo.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
 </head>
 
-<body id="generalBody" class="sectionBody">
+<body id="generalBody">
   <header>
-    <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-bs-theme="dark" id="nav">
       <div class="container-fluid">
         @if (User.Identity.IsAuthenticated)
         {
@@ -39,10 +36,16 @@
                   Opciones
                 </a>
                 <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" asp-action="Index" asp-controller="Home">Dashboard</a>
+                  </li>
                   @if (User.IsInRole("administrador"))
                   {
                     <li>
                       <a class="dropdown-item" asp-action="MostrarUsuarios" asp-controller="Usuarios">Usuarios</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" asp-action="Index" asp-controller="Dispositivos">Dispositivos</a>
                     </li>
                   }
                 </ul>
@@ -64,22 +67,14 @@
       </div>
     </nav>
   </header>
-  <div class="contenedor">
-    <main role="main">
-
-      @RenderBody()
-    </main>
-  </div>
+  <main role="main">
+    @RenderBody()
+  </main>
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+  <script src="~/lib/SweetAlert/sweetalert2.all.min.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
-
-  <div class="wave wave1 z-2"></div>
-  <div class="wave wave2 z-1"></div>
-  <div class="wave wave3 z-0"></div>
-  <div class="wave wave4 z-n1"></div>
 </body>
 
 </html>

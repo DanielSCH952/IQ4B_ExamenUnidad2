@@ -3,70 +3,80 @@
     ViewData["Title"] = "Registrar Usuario";
 }
 
-<h1 class="text-center mt-3 mb-3">@ViewData["Title"]</h1>
-
-<div class="container">
-    <div class="row d-flex justify-content-center align-items-center">
-        <form class="col-5" asp-action="RegistrarUsuario" method="post">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-8 mb-3">
-                    <label asp-for="Nombre" class="form-label"></label>
-                    <input type="text" class="form-control" asp-for="Nombre">
-                    <span asp-validation-for="Nombre" class="form-text"></span>
+  <link rel="stylesheet" href="~/css/fondo.css">
+<section>
+    <div class="contenedor">
+        <div class="row d-flex justify-content-center align-items-center">
+            <h1 class="text-center mt-3 mb-3">@ViewData["Title"]</h1>
+            <form class="col-6" asp-action="RegistrarUsuario" method="post">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-8 mb-3">
+                        <label asp-for="Nombre" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Nombre">
+                        <span asp-validation-for="Nombre" class="form-text"></span>
+                    </div>
                 </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-4 mb-3">
+                        <label asp-for="ApellidoPaterno" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="ApellidoPaterno">
+                        <span asp-validation-for="ApellidoPaterno" class="form-text"></span>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <label asp-for="ApellidoMaterno" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="ApellidoMaterno">
+                        <span asp-validation-for="ApellidoMaterno" class="form-text"></span>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-4 mb-3">
+                        <label asp-for="Edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" asp-for="Edad">
+                        <span asp-validation-for="Edad" class="form-text"></span>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <label asp-for="Sexo"></label>
+                        <select class="form-select" asp-for="Sexo">
+                            <option selected>Seleccione</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                        <span asp-validation-for="Sexo" class="form-text"></span>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-8 mb-3">
+                        <label asp-for="Username" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Username">
+                        <span asp-validation-for="Username" class="form-text"></span>
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label asp-for="Password" class="form-label"></label>
+                        <input type="password" class="form-control" asp-for="Password">
+                        <span asp-validation-for="Password" class="form-text"></span>
+                    </div>
+                    <input type="hidden" asp-for="IdRol" value="11">
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-3"> <button type="submit" class="btn btn-primary text-center">Registrar</button>
+                    </div>
+                    <div class="col-3">
+                        <a class="btn btn-outline-danger text-center" asp-action="MostrarUsuarios">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row row d-flex justify-content-center align-items-center">
+            <div class="col-3">
+                @if (ViewBag.Error != null)
+                {
+                    <span class="span">@ViewBag.Error</span>
+                }
             </div>
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-4 mb-3">
-                    <label asp-for="ApellidoPaterno" class="form-label"></label>
-                    <input type="text" class="form-control" asp-for="ApellidoPaterno">
-                    <span asp-validation-for="ApellidoPaterno" class="form-text"></span>
-                </div>
-                <div class="col-4 mb-3">
-                    <label asp-for="ApellidoMaterno" class="form-label"></label>
-                    <input type="text" class="form-control" asp-for="ApellidoMaterno">
-                    <span asp-validation-for="ApellidoMaterno" class="form-text"></span>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-4 mb-3">
-                    <label asp-for="Edad" class="form-label">Edad</label>
-                    <input type="number" class="form-control" asp-for="Edad">
-                    <span asp-validation-for="Edad" class="form-text"></span>
-                </div>
-                <div class="col-4 mb-3">
-                    <label asp-for="Sexo"></label>
-                    <select class="form-select" asp-for="Sexo">
-                        <option selected>Seleccione</option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Femenino</option>
-                    </select>
-                    <span asp-validation-for="Sexo" class="form-text"></span>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-8 mb-3">
-                    <label asp-for="Username" class="form-label"></label>
-                    <input type="text" class="form-control" asp-for="Username">
-                    <span asp-validation-for="Username" class="form-text"></span>
-                </div>
-                <div class="col-8 mb-3">
-                    <label asp-for="Password" class="form-label"></label>
-                    <input type="password" class="form-control" asp-for="Password">
-                    <span asp-validation-for="Password" class="form-text"></span>
-                </div>
-                <input type="hidden" asp-for="IdRol" value="11">
-            </div>
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-4"> <button type="submit" class="btn btn-primary text-center">Registrar</button></div>
-            </div>
-        </form>
-    </div>
-    <div class="row row d-flex justify-content-center align-items-center">
-        <div class="col-3">
-            @if (ViewBag.Error != null)
-            {
-                <span class="span">@ViewBag.Error</span>
-            }
         </div>
     </div>
-</div>
+      <div class="wave wave1"></div>
+  <div class="wave wave2"></div>
+  <div class="wave wave3"></div>
+  <div class="wave wave4"></div>
+</section>

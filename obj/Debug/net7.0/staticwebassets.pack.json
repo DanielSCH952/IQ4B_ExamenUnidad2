@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\fondo.css"
     },
     {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\css\\nopermitido.css",
+      "PackagePath": "staticwebassets\\css\\nopermitido.css"
+    },
+    {
       "Id": "C:\\IQ4B\\ExU2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -17,8 +25,40 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\js\\dispositivos.js",
+      "PackagePath": "staticwebassets\\js\\dispositivos.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\js\\indexAdmin.js",
+      "PackagePath": "staticwebassets\\js\\indexAdmin.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\js\\indexAlerts.js",
+      "PackagePath": "staticwebassets\\js\\indexAlerts.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\js\\indexUser.js",
+      "PackagePath": "staticwebassets\\js\\indexUser.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\js\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr.js"
+    },
+    {
       "Id": "C:\\IQ4B\\ExU2\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\SweetAlert\\sweetalert2.all.min.js",
+      "PackagePath": "staticwebassets\\lib\\SweetAlert\\sweetalert2.all.min.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\SweetAlert\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\lib\\SweetAlert\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\SweetAlert\\sweetalert2@11.js",
+      "PackagePath": "staticwebassets\\lib\\SweetAlert\\sweetalert2@11.js"
     },
     {
       "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -247,6 +287,66 @@
     {
       "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\layers-2x.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\layers-2x.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\layers.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\layers.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\marker-icon-2x.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon-2x.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\marker-icon-add.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon-add.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\marker-icon-disable.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon-disable.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\marker-icon-enable.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon-enable.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\marker-icon.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\images\\marker-shadow.png",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-shadow.png"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet-src.esm.js",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.esm.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet-src.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.esm.js.map"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet-src.js",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet-src.js.map",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.js.map"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet.css",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.css"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet.js",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.js"
+    },
+    {
+      "Id": "C:\\IQ4B\\ExU2\\wwwroot\\lib\\leaflet\\leaflet.js.map",
+      "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.js.map"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ExU2.Microsoft.AspNetCore.StaticWebAssets.props",

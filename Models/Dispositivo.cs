@@ -19,9 +19,13 @@ public partial class Dispositivo
 
     public bool Estatus { get; set; }
 
-    public int IdUsuario { get; set; }
+    public int? IdZona { get; set; }
+
+    public int? IdUsuario { get; set; }
 
     public virtual ICollection<HistorialDispositivo> HistorialDispositivos { get; set; } = new List<HistorialDispositivo>();
 
-    public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+    public virtual Usuario? IdUsuarioNavigation { get; set; }
+
+    public virtual Zona? IdZonaNavigation { get; set; }
 }

@@ -1,7 +1,9 @@
-.sectionBody {
+section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 92vh;
+
+  background: #3586ff;
   background: radial-gradient(
     ellipse at center,
     rgba(255, 254, 234, 1) 0%,
@@ -10,44 +12,56 @@
   );
   overflow: hidden;
 }
+section .contenedor {
+  width: 100%;
+  height: 75vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  scrollbar-darkshadow-color: #3586ff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: none;
+  z-index: 999;
+}
 
-.sectionBody .wave {
+section .wave {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 198px;
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg");
-  backgroud-size: 100% 198px;
+  backgroud-size: 1600px 198px;
 }
 
-.sectionBody .wave.wave1 {
+section .wave.wave1 {
   animation: animate-wave-1 30s linear infinite;
-  z-index: 999;
+  z-index: 998;
   opacity: 1;
   animation-delay: 0s;
   bottom: 0;
 }
 
-.sectionBody .wave.wave2 {
+section .wave.wave2 {
   animation: animate-wave-2 15s linear infinite;
-  z-index: 998;
+  z-index: 997;
   opacity: 0.5;
   animation-delay: -5s;
   bottom: 10px;
 }
 
-.sectionBody .wave.wave3 {
+section .wave.wave3 {
   animation: animate-wave-3 30s linear infinite;
-  z-index: 997;
+  z-index: 996;
   opacity: 0.2;
   animation-delay: -2s;
   bottom: 15px;
 }
 
-.sectionBody .wave.wave4 {
+section .wave.wave4 {
   animation: animate-wave-4 5s linear infinite;
-  z-index: 996;
+  z-index: 995;
   opacity: 0.7;
   animation-delay: -5s;
   bottom: 20px;
@@ -88,15 +102,19 @@
     background-position-x: -1600px;
   }
 }
-.contenedor {
-  width: 100vw;
-  height: 80vh;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  scrollbar-darkshadow-color: #3586ff;
-  overflow-x: hidden;
-  overflow-y:auto;
-  scroll-snap-type: none;
-  z-index: 1000;
+#map {
+  width: auto;
+  height: 40vh;
+}
+#mapa2 {
+  width: 50vw;
+  height: 55vh;
+}
+.content-chart {
+  display: flex;
+  height: 55vh;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }

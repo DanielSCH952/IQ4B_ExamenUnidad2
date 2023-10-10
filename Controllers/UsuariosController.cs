@@ -57,7 +57,6 @@ namespace ExU2.Controllers
 
             if (ModelState.IsValid)
             {
-
                 context.Usuarios.Add(u);
                 context.SaveChanges();
                 return RedirectToAction("MostrarUsuarios");

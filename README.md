@@ -11,3 +11,12 @@ Si deseas dejar un comentario de lo que has modificado se agradece, porfi, puede
     + Hora:  
         * 6:11 PM
     + Autor: Daniel Sepulveda Chiguils
+
+- ### Actalizacion Fondo:  
+    + Detalles:  
+        * Se ha agregado un fondo de olas y un contenedorcon un scroll-y auto
+    + Fecha:
+        * 07/10/2023  
+    + Hora:  
+        * 9:00 PM
+    + Autor: Daniel Sepulveda Chiguils

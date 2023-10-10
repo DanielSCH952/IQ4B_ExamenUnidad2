@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\IQ4B\ExU2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/IQ4B/ExU2/Views/Dispositivos/Actualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcG9zaXRpdm9zXEFjdHVhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/IQ4B/ExU2/Views/Dispositivos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcG9zaXRpdm9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/IQ4B/ExU2/Views/Dispositivos/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcG9zaXRpdm9zXFJlZ2lzdHJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/IQ4B/ExU2/Views/HistorialDispositivos/Index.cshtml]

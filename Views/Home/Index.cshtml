@@ -1,4 +1,53 @@
-﻿@{
-    ViewData["Title"] = "Dashboar";
-}
-<h1 class="h1 text-center">@ViewData["Title"]</h1>
+﻿<section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="~/lib/leaflet/leaflet.css">
+  <link rel="stylesheet" href="~/css/fondo.css">
+  <script src="~/lib/leaflet/leaflet.js"></script>
+
+  <div class="contenedor">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-10">
+        @if (User.IsInRole("administrador"))
+        {
+          <h2 class="h2 text-center mt-4 mb-2">Consumo de agua</h2>
+          //apartado para el grafica
+          <div class="row d-flex justify-content-center align-items-center mt-4 mb-4">
+            <div class="col-12">
+              <div class="content-chart">
+                <canvas id="grafica"></canvas>
+              </div>
+            </div>
+          </div>
+          <h2 class="h2 text-center mt-4 mb-1">Dispositivos</h2>
+          //apartado para el Dispositivos
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-6">
+              <div id="map"></div>
+            </div>
+            <div class="col-5">
+              <div class="content-chart">
+                <canvas id="chart"></canvas>
+              </div>
+            </div>
+          </div>
+          <script src="~/js/indexAdmin.js"></script>
+        }
+        else
+        {
+          <h2 class="h2 text-center">Welcome</h2>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12">
+              <div id="mapa2"></div>
+            </div>
+          </div>
+          <script src="~/js/indexUser.js"></script>
+        }
+
+      </div>
+    </div>
+  </div>
+  <div class="wave wave1"></div>
+  <div class="wave wave2"></div>
+  <div class="wave wave3"></div>
+  <div class="wave wave4"></div>
+</section>

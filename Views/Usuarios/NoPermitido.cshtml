@@ -1,25 +1,50 @@
-@{
-    ViewData["Title"] = "NoPermitido";
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="~/css/nopermitido.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="message">
+        No tienes acceso al recurso
+    </div>
+    <div class="message2">
+        Estás tratando de acceder a recursos que no están autorizados para ti
+    </div>
 }
-<div>
-    <h1 class="h1">No permitido</h1><br>
-    @if (!User.Identity.IsAuthenticated)
-    {
-        <h1 class="h2 text-center">Necesita iniciar sesion</h1>
-        <a asp-action="Login" asp-controller="Usuarios" class="btn btn-danger">Regresar al dashboar</a>
-    }
-    else
-    {
-        @if (User.IsInRole("usuario"))
-        {
-            <h1 class="h2 text-center">No tiene permiso para esto</h1>
-            <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Regresar al inicio</a>
-        }
-        else
-        {
-            <h1 class="h2 text-center">Si estas aqui es porque se me paso una validacion</h1>
-            <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Regresar al inicio</a>
-        }
+else
+{
+    <div class="message">
+        No cuentas con una sesión iniciada
+    </div>
+    <div class="message2">
+        Inicia sesión para poder acceder a la aplicación
+    </div>
+}
 
-    }
+
+
+<div class="container-no">
+    <div class="neon">Ups</div>
+    <div class="door-frame">
+        <div class="door">
+            <div class="rectangle">
+            </div>
+            <div class="handle">
+            </div>
+            <div class="window">
+                <div class="eye">
+                </div>
+                <div class="eye eye2">
+                </div>
+                <div class="leaf">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script>
+    const nav = document.getElementById("nav");
+    if (nav.classList.contains("bg-primary")) {
+        nav.classList.toggle("bg-primary");
+        nav.classList.toggle("bg-dark")
+    }
+</script>

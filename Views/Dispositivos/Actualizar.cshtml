@@ -1,0 +1,82 @@
+@model ExU2.Models.Dispositivo;
+@{
+    ViewData["Title"] = "Actualizar";
+}
+<link rel="stylesheet" href="~/css/fondo.css">
+<section>
+
+    <div class="contenedor">
+        <h1 class="h1 text-center mt-2 mb-3">
+            @ViewData["Title"]
+        </h1>
+        <div class="row d-flex justify-content-center align-items-center">
+            <form class="col-5" asp-action="Registrar" method="post">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-8 mb-3">
+                        <label asp-for="DireccionMac" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="DireccionMac">
+                        <span asp-validation-for="DireccionMac" class="form-text"></span>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-8 mb-3">
+                        <input type="number" hidden asp-for="Latitud" value="@ViewBag.lat">
+                        <input type="number" hidden asp-for="Longitud" value="@ViewBag.lng">
+                        <label asp-for="Descripcion" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Descripcion">
+                        <span asp-validation-for="Descripcion" class="form-text"></span>
+
+
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-4 mb-3">
+                        <label asp-for="Prioridad" class="form-label"></label>
+                        <select class="form-select" asp-for="Prioridad">
+                            <option selected>Seleccione</option>
+                            <option value="3">Alta</option>
+                            <option value="2">Media</option>
+                            <option value="1">Baja</option>
+
+                        </select>
+                        <span asp-validation-for="Prioridad" class="form-text"></span>
+
+                    </div>
+                    <div class="col-4 mb-3">
+                        <input hidden asp-for="Estatus" value="false">
+                        <label asp-for="IdZona"></label>
+                        <select class="form-select" asp-for="IdZona" asp-items="@ViewBag.Zonas">
+                        </select>
+                        <span asp-validation-for="IdZona" class="form-text"></span>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-8 mb-3">
+                        <label asp-for="IdUsuario"></label>
+                        <select class="form-select" asp-for="IdUsuario" asp-items="@ViewBag.Usuarios">
+                        </select>
+                        <span asp-validation-for="Estatus" class="form-text"></span>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-3"> <button type="submit" class="btn btn-primary text-center">Registrar</button>
+                    </div>
+                    <div class="col-3"> <a class="btn btn-outline-danger text-center" asp-action="Index">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row row d-flex justify-content-center align-items-center">
+            <div class="col-3">
+                @if (ViewBag.Error != null)
+                {
+                    <span class="span">@ViewBag.Error</span>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+</section>

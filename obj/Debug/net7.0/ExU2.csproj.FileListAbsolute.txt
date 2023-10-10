@@ -79,3 +79,5 @@ C:\IQ4B\ExU2\obj\Debug\net7.0\refint\ExU2.dll
 C:\IQ4B\ExU2\obj\Debug\net7.0\ExU2.pdb
 C:\IQ4B\ExU2\obj\Debug\net7.0\ExU2.genruntimeconfig.cache
 C:\IQ4B\ExU2\obj\Debug\net7.0\ref\ExU2.dll
+C:\IQ4B\ExU2\bin\Debug\net7.0\package-lock.json
+C:\IQ4B\ExU2\bin\Debug\net7.0\package.json
